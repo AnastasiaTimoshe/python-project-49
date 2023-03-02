@@ -1,0 +1,12 @@
+# created by virtualenv automatically
+*.pyc
+
+__pycache__/
+
+dist/
+
+/dist/
+
+.venv/
+
+.swp/
