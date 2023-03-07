@@ -1,8 +1,8 @@
 # created by virtualenv automatically
 *.pyc
-__pycache__/
+__pycache__
 dist/
 /dist/
 .venv/
-.swp/
 .DS_Store
+.idea/
