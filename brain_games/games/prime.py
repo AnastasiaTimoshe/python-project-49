@@ -5,14 +5,6 @@ import brain_games.cli as cli
 from random import randint
 
 
-# check numbers for even
-def is_prime(num_to_check):
-    for i in range(2, num_to_check):
-        if (num_to_check % i) == 0:
-            return 'no'
-        return 'yes'
-
-
 # Ask for name and welcome user
 cli.welcome_user()
 
@@ -21,6 +13,16 @@ questions = []
 
 # generate random numbers and operations for question
 random_values = tuple(randint(2, 100) for _ in range(3))
+
+
+# check numbers for even
+def is_prime(num_to_check):
+    # divide the number by the range to the number itself
+    for i in range(2, num_to_check):
+        if (num_to_check % i) == 0:
+            return 'no'
+    return 'yes'
+
 
 # Generate questions and answers strings add to questions lists
 for item in random_values:
