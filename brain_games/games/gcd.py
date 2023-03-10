@@ -22,4 +22,4 @@ for item in nums:
     questions.append((question, answer))
 
 # game rules
-game_rules = 'Find the greatest common divisor of given numbers.'
+GAME_RULES = 'Find the greatest common divisor of given numbers.'

@@ -33,4 +33,4 @@ for _ in range(3):
     questions.append((question, answer))
 
 # game rules
-game_rules = 'What number is missing in the progression?'
+GAME_RULES = 'What number is missing in the progression?'

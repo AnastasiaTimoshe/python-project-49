@@ -30,4 +30,4 @@ for item in random_values:
     questions.append((item, answer))
 
 # game rules
-game_rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'

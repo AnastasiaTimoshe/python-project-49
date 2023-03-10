@@ -25,4 +25,4 @@ for item in random_values:
     questions.append((question, answer))
 
 # game rules
-game_rules = 'What is the result of the expression?'
+GAME_RULES = 'What is the result of the expression?'
