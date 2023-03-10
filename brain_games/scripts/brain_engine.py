@@ -3,7 +3,7 @@ import brain_games.cli as cli
 
 
 def run_game(game_module):
-    print(game_module.game_rules)
+    print(game_module.GAME_RULES)
     for question in game_module.questions:
         print('Question: ' + str(question[0]))
         answer_user = input('Your answer: ')
