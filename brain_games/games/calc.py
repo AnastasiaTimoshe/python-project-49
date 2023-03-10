@@ -15,7 +15,8 @@ questions = []
 operators_tuple = ('+', '-', '*')
 
 # generate random numbers and operations for question
-random_values = tuple((randint(1, 9), randint(1, 9), choice(operators_tuple)) for _ in range(3))
+random_values = tuple((randint(1, 9), randint(1, 9),
+                       choice(operators_tuple)) for _ in range(3))
 
 # Generate questions and answers strings add to questions lists
 for item in random_values:
