@@ -18,7 +18,7 @@ nums = tuple((randint(1, 20), randint(1, 20)) for _ in range(3))
 # generate list of questions and answers
 for item in nums:
     answer = str(gcd(item[0], item[1]))
-    question = f'{item[0]} and {item[1]}'
+    question = f'{item[0]} {item[1]}'
     questions.append((question, answer))
 
 # game rules
