@@ -1,18 +1,14 @@
 #!/usr/bin/env python3
 
 # Import libraries
-import brain_games.cli as cli
 from random import randint
 
+# game rules
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-# Ask for name and welcome user
-cli.welcome_user()
-
-# Define empty list for questions
-questions = []
-
-# generate random numbers and operations for question
-random_values = tuple(randint(2, 100) for _ in range(3))
+# Number limits
+MIN_NUM = 2
+MAX_NUM = 100
 
 
 # check numbers for even
@@ -24,10 +20,12 @@ def is_prime(num_to_check):
     return 'yes'
 
 
-# Generate questions and answers strings add to questions lists
-for item in random_values:
-    answer = is_prime(item)
-    questions.append((item, answer))
+def generate_question():
+    # generate random number for question
+    random_values = randint(MIN_NUM, MAX_NUM)
 
-# game rules
-GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    # Generate question and answer strings
+    answer = is_prime(random_values)
+    question = str(random_values)
+
+    return question, answer

@@ -1,36 +1,40 @@
 #!/usr/bin/env python3
 
 # Import libraries
-import brain_games.cli as cli
 from random import randint
 
 
-# Ask for name and welcome user
-cli.welcome_user()
+# game rules
+GAME_RULES = 'What number is missing in the progression?'
 
-# Define empty list for questions
-questions = []
+# Number limits
+START_MIN_NUM = 0
+START_MAX_NUM = 20
+STEP_MIN_NUM = 2
+STEP_MAX_NUM = 10
+PROGRESSION_MIN_NUM = 6
+PROGRESSION_MAX_NUM = 10
 
-#
-for _ in range(3):
-    step = randint(2, 10)
-    prgs_len = randint(6, 10)
-    start = randint(0, 10)
-    stop = start + step * prgs_len
+
+def generate_question():
+    step = randint(STEP_MIN_NUM, STEP_MAX_NUM)
+    progression_len = randint(PROGRESSION_MIN_NUM, PROGRESSION_MAX_NUM)
+    start = randint(START_MIN_NUM, START_MAX_NUM)
+    stop = start + step * progression_len
 
     # Tuple of random numbers
     nums = list(i for i in range(start, stop, step))
 
-    #
+    # define index of number in progression which we want to hide
     random_index = randint(0, len(nums) - 1)
     answer = str(nums[random_index])
     nums[random_index] = '..'
+
+    # define variable to store question
     question = ''
 
     # generate list of questions and answers
     for item in nums:
         question = question + str(item) + ' '
-    questions.append((question, answer))
 
-# game rules
-GAME_RULES = 'What number is missing in the progression?'
+    return question, answer
