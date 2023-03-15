@@ -17,11 +17,12 @@ MAX_NUM = 9
 
 def generate_question():
     # generate random numbers and operations for question
-    random_values = tuple((randint(MIN_NUM, MAX_NUM), randint(MIN_NUM, MAX_NUM),
-                           choice(OPERATORS_TUPLE)))
+    random_num1 = randint(MIN_NUM, MAX_NUM)
+    random_num2 = randint(MIN_NUM, MAX_NUM)
+    math_operators = choice(OPERATORS_TUPLE)
 
     # Generate questions and answers strings add to questions lists
-    question = f'{random_values[0]} {random_values[2]} {random_values[1]}'
+    question = f'{random_num1} {math_operators} {random_num2}'
     answer = str(eval(question))
 
     return question, answer

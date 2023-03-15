@@ -10,22 +10,24 @@ GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 MIN_NUM = 2
 MAX_NUM = 100
 
+BOOLS = ('no', 'yes')
+
 
 # check numbers for even
 def is_prime(num_to_check):
     # divide the number by the range to the number itself
     for i in range(2, num_to_check):
         if (num_to_check % i) == 0:
-            return 'no'
-    return 'yes'
+            return False
+    return True
 
 
 def generate_question():
     # generate random number for question
-    random_values = randint(MIN_NUM, MAX_NUM)
+    random_value = randint(MIN_NUM, MAX_NUM)
 
     # Generate question and answer strings
-    answer = is_prime(random_values)
-    question = str(random_values)
+    answer = BOOLS[is_prime(random_value)]
+    question = str(random_value)
 
     return question, answer

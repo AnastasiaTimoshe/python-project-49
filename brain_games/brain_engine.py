@@ -2,7 +2,7 @@
 import brain_games.cli as cli
 
 
-NUM_OF_TRYS = 3
+NUM_OF_TRIES = 3
 
 
 def run_game(game_module):
@@ -11,7 +11,7 @@ def run_game(game_module):
 
     print(game_module.GAME_RULES)
 
-    for _ in range(NUM_OF_TRYS):
+    for _ in range(NUM_OF_TRIES):
         question, answer = game_module.generate_question()
         print('Question: ' + question)
         answer_user = input('Your answer: ')

@@ -22,7 +22,7 @@ def generate_question():
     start = randint(START_MIN_NUM, START_MAX_NUM)
     stop = start + step * progression_len
 
-    # Tuple of random numbers
+    # List of random numbers
     nums = list(i for i in range(start, stop, step))
 
     # define index of number in progression which we want to hide
