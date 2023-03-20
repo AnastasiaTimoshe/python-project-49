@@ -10,7 +10,8 @@ GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 MIN_NUM = 2
 MAX_NUM = 100
 
-BOOLS = ('no', 'yes')
+# Dictionary for BOOL:string conversion
+BOOLS = {True: 'yes', False: 'no'}
 
 
 # check numbers for even
@@ -27,7 +28,7 @@ def generate_question():
     random_value = randint(MIN_NUM, MAX_NUM)
 
     # Generate question and answer strings
-    answer = BOOLS[is_prime(random_value)]
+    answer = BOOLS.get(is_prime(random_value), '')
     question = str(random_value)
 
     return question, answer

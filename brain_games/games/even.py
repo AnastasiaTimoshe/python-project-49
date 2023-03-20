@@ -18,8 +18,6 @@ def generate_question():
     question = str(num)
 
     # generate list of questions and answers
-    if num % 2 == 0:
-        answer = 'yes'
-    else:
-        answer = 'no'
+    answer = 'yes' if num % 2 == 0 else 'no'
+
     return question, answer
