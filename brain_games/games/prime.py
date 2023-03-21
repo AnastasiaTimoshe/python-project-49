@@ -14,7 +14,7 @@ MAX_NUM = 100
 BOOLS = {True: 'yes', False: 'no'}
 
 
-# check numbers for even
+# check numbers for prime
 def is_prime(num_to_check):
     # divide the number by the range to the number itself
     for i in range(2, num_to_check):
@@ -28,7 +28,7 @@ def generate_question():
     random_value = randint(MIN_NUM, MAX_NUM)
 
     # Generate question and answer strings
-    answer = BOOLS.get(is_prime(random_value), '')
+    answer = 'yes' if is_prime(random_value) else 'no'
     question = str(random_value)
 
     return question, answer

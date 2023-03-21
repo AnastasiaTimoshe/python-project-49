@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-import brain_games.cli as cli
+import prompt
 
 
 NUM_OF_TRIES = 3
@@ -7,7 +6,9 @@ NUM_OF_TRIES = 3
 
 def run_game(game_module):
     # Ask for name and welcome user
-    cli.welcome_user()
+    print('Welcome to the Brain Games!')
+    username = prompt.string('May I have your name? ')
+    print(f'Hello, {username}!')
 
     print(game_module.GAME_RULES)
 
@@ -20,6 +21,6 @@ def run_game(game_module):
         else:
             print(f"{answer_user} is wrong answer ;(. "
                   f"Correct answer was {answer}. "
-                  f"Let's try again, {cli.username}!")
+                  f"Let's try again, {username}!")
             quit()
-    print(f'Congratulations, {cli.username}!')
+    print(f'Congratulations, {username}!')

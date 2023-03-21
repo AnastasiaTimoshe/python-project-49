@@ -19,10 +19,16 @@ def generate_question():
     # generate random numbers and operations for question
     random_num1 = randint(MIN_NUM, MAX_NUM)
     random_num2 = randint(MIN_NUM, MAX_NUM)
-    math_operators = choice(OPERATORS_TUPLE)
+    math_operator = choice(OPERATORS_TUPLE)
 
     # Generate questions and answers strings add to questions lists
-    question = f'{random_num1} {math_operators} {random_num2}'
-    answer = str(eval(question))
+    question = f'{random_num1} {math_operator} {random_num2}'
+
+    if math_operator == '+':
+        answer = str(random_num1 + random_num2)
+    elif math_operator == '-':
+        answer = str(random_num1 - random_num2)
+    else:
+        answer = str(random_num1 * random_num2)
 
     return question, answer
