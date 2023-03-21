@@ -10,9 +10,6 @@ GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 MIN_NUM = 2
 MAX_NUM = 100
 
-# Dictionary for BOOL:string conversion
-BOOLS = {True: 'yes', False: 'no'}
-
 
 # check numbers for prime
 def is_prime(num_to_check):

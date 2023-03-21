@@ -23,12 +23,17 @@ def generate_question():
 
     # Generate questions and answers strings add to questions lists
     question = f'{random_num1} {math_operator} {random_num2}'
-
-    if math_operator == '+':
-        answer = str(random_num1 + random_num2)
-    elif math_operator == '-':
-        answer = str(random_num1 - random_num2)
-    else:
-        answer = str(random_num1 * random_num2)
+    answer = calculate(random_num1, random_num2, math_operator)
 
     return question, answer
+
+
+def calculate(random_num1, random_num2, math_operator):
+    if math_operator == '+':
+        answer_result = str(random_num1 + random_num2)
+    elif math_operator == '-':
+        answer_result = str(random_num1 - random_num2)
+    else:
+        answer_result = str(random_num1 * random_num2)
+
+    return answer_result

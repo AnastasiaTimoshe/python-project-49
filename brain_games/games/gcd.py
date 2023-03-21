@@ -13,12 +13,11 @@ MIN_NUM = 1
 MAX_NUM = 20
 
 
+# generate list of questions and answers
 def generate_question():
-    # Tuple of random numbers
-    nums = tuple((randint(MIN_NUM, MAX_NUM), randint(MIN_NUM, MAX_NUM)))
-
-    # generate list of questions and answers
-    answer = str(gcd(nums[0], nums[1]))
-    question = f'{nums[0]} {nums[1]}'
+    random_num1 = randint(MIN_NUM, MAX_NUM)
+    random_num2 = randint(MIN_NUM, MAX_NUM)
+    question = f'{random_num1} {random_num2}'
+    answer = str(gcd(random_num1, random_num2))
 
     return question, answer
